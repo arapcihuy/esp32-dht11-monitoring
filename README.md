@@ -1,79 +1,94 @@
-# 🌡️ ESP32 DHT11 Real-time Monitoring
+# ESP32 DHT11 Real-time Monitoring
 
-Sistem monitoring suhu dan kelembaban udara secara real-time menggunakan ESP32 dan sensor DHT11.
+[![CodeQL](https://github.com/arapcihuy/esp32-dht11-monitoring/actions/workflows/codeql.yml/badge.svg)](https://github.com/arapcihuy/esp32-dht11-monitoring/actions/workflows/codeql.yml)
+[![GitHub repo](https://img.shields.io/badge/GitHub-arapcihuy%2Fesp32--dht11--monitoring-blue?logo=github)](https://github.com/arapcihuy/esp32-dht11-monitoring)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#license)
 
-## 📋 Fitur
+Sistem monitoring suhu dan kelembaban real-time berbasis ESP32 + sensor DHT11. Proyek ini menampilkan kemampuan IoT, integrasi sensor, konektivitas WiFi, dan dashboard monitoring sederhana.
 
-- 🌡️ Monitoring suhu real-time
-- 💧 Monitoring kelembaban udara
-- 📊 Visualisasi data dashboard
-- ⚡ Update data secara real-time
-- 🔔 Notifikasi jika parameter di luar batas normal
+## Ringkasan
 
-## 🛠️ Hardware Requirements
+- Platform: ESP32
+- Sensor: DHT11 temperature & humidity
+- Fokus: IoT monitoring, data real-time, embedded prototyping
+- Status: Portfolio project
+
+## Fitur
+
+- Monitoring suhu real-time
+- Monitoring kelembaban udara
+- Koneksi WiFi ESP32
+- Dashboard/serial output untuk pemantauan data
+- Struktur proyek sederhana dan mudah dikembangkan
+
+## Hardware
 
 - ESP32 Development Board
-- Sensor DHT11 (Temperature & Humidity)
-- Kabel jumper
+- Sensor DHT11
 - Breadboard
-- Koneksi internet (WiFi)
+- Kabel jumper
+- Koneksi WiFi
 
-## 🚀 Instalasi & Setup
+## Wiring
 
-### 1. Clone Repository
+| DHT11 | ESP32 |
+|---|---|
+| VCC | 3.3V |
+| GND | GND |
+| DATA | GPIO 4 |
+
+## Instalasi
+
 ```bash
-git clone https://github.com/arapcihuy/realtime-monitoring-dht-11-sensor-with-esp-32.git
-cd realtime-monitoring-dht-11-sensor-with-esp-32
+git clone https://github.com/arapcihuy/esp32-dht11-monitoring.git
+cd esp32-dht11-monitoring
 ```
 
-### 2. Upload ke ESP32
-- Buka file `.ino` di Arduino IDE
-- Install library DHT sensor library by Adafruit
-- Pilih board: ESP32 Dev Module
-- Hubungkan ESP32 ke komputer
-- Upload kode ke ESP32
+Buka file `.ino` di Arduino IDE, lalu install library:
 
-### 3. Konfigurasi WiFi
-Edit file konfigurasi:
+- DHT sensor library by Adafruit
+- Adafruit Unified Sensor
+
+Konfigurasi WiFi:
+
 ```cpp
-const char* ssid = "NAMA_WIFI_ANDA";
+const char* ssid = "NAMA_WIFI";
 const char* password = "PASSWORD_WIFI";
 ```
 
-### 4. Koneksi Hardware
-```
-DHT11 DATA pin -> ESP32 GPIO 4
-DHT11 VCC -> 3.3V
-DHT11 GND -> GND
-```
+Upload ke board ESP32.
 
-## 📖 Cara Penggunaan
+## Penggunaan
 
-1. Power on ESP32
-2. Tunggu koneksi WiFi (indikator LED)
-3. Akses dashboard monitoring di browser
-4. Pantau suhu dan kelembaban secara real-time
+1. Hubungkan sensor sesuai wiring.
+2. Upload sketch ke ESP32.
+3. Buka Serial Monitor / dashboard.
+4. Pantau suhu dan kelembaban secara real-time.
 
-## 📊 Spesifikasi Sensor
+## Spesifikasi Sensor
 
 | Parameter | Range | Akurasi |
-|-----------|-------|---------|
+|---|---:|---:|
 | Suhu | 0-50°C | ±2°C |
-| Kelembaban | 20-90% | ±5% |
+| Kelembaban | 20-90% RH | ±5% RH |
 
-## 🤝 Kontribusi
+## Security Notes
 
-Kontribusi terbuka! Silakan:
-- Fork repo ini
-- Buat branch fitur
-- Submit Pull Request
+- Jangan commit SSID/password asli.
+- Gunakan file konfigurasi lokal atau environment secret untuk deployment lanjutan.
+- Aktifkan GitHub CodeQL untuk pemeriksaan keamanan otomatis.
 
-## 📄 Lisensi
+## Roadmap
 
-Proyek ini dilisensikan di bawah lisensi MIT.
+- Integrasi MQTT/HTTP API
+- Dashboard web real-time
+- Alert threshold suhu/kelembaban
+- Penyimpanan data historis
 
-## 📞 Kontak
+## Author
 
-Rasyid Achmad Fauzi - [@arapcihuy](https://github.com/arapcihuy)
+Rasyid Achmad Fauzi — https://github.com/arapcihuy
 
-Project Link: [https://github.com/arapcihuy/realtime-monitoring-dht-11-sensor-with-esp-32](https://github.com/arapcihuy/realtime-monitoring-dht-11-sensor-with-esp-32)
+## License
+
+MIT License.
