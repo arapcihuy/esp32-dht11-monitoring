@@ -1,6 +1,6 @@
 # ESP32 DHT11 Real-time Monitoring
 
-[![CodeQL](https://github.com/arapcihuy/esp32-dht11-monitoring/actions/workflows/codeql.yml/badge.svg)](https://github.com/arapcihuy/esp32-dht11-monitoring/actions/workflows/codeql.yml)
+[![Platform: ESP32](https://img.shields.io/badge/Platform-ESP32-000000?logo=espressif&logoColor=white)](https://www.espressif.com/)
 [![GitHub repo](https://img.shields.io/badge/GitHub-arapcihuy%2Fesp32--dht11--monitoring-blue?logo=github)](https://github.com/arapcihuy/esp32-dht11-monitoring)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#license)
 
